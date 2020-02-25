@@ -1,0 +1,68 @@
+.container{
+    position: relative;
+    margin: 10px auto;
+    width: 90%;
+    z-index: 1;
+}
+
+.content{
+    margin: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 15px
+}
+
+.blogs{
+    width: 75%;
+    margin: 20px auto;
+    height: auto;
+    display: block;
+    border: black solid 5px;
+    background:white;
+    list-style: none;
+
+}
+
+.image{
+    width: 225px;
+    height: auto;
+    float: left;
+    display: block;
+    border-radius: 5%;
+    margin-right: 10px;
+}
+
+#title{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: "Poiret One";
+
+}
+
+#date{
+    margin-top: 0;
+    padding-top: 0;
+    color: gray;
+    font-size: x-small;
+}
+
+.btn{
+    font-family: "Poiret One";
+}
+
+
+li{
+    padding-bottom: 15px;
+    border-bottom: black dashed 1px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+pagination-controls {
+    float: right;
+    margin-right: 20%;
+    font-family: 'Poiret One';
+}

@@ -1,0 +1,22 @@
+<ul>
+    <li class="blogs"  *ngFor="let blog of blogs | paginate: config">
+        <div class="content">
+            <img class="image" src="{{blog.image}}" alt="Card image cap">
+            <div>
+                <h2 id="title">{{blog.title}}</h2>
+                <span id="date">{{blog.date | date}}</span>
+                <p class="text">{{blog.body | slice:0:100}}...</p>
+                <span class="right">
+                    <button (click)="onClick(blog)" class="btn btn-dark btn-sm">Read More</button>
+                </span>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+
+
+
+
+

@@ -1,0 +1,61 @@
+.container{
+    width: 75%;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 50px;
+}
+
+.post{
+    border: black 5px solid;
+    border-top: none;
+}
+
+h1{
+    font-family: "Poiret One";
+}
+
+.image{
+    display: block;
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    align-content: center;
+}
+
+#date{
+    margin-top: 0;
+    padding-top: 0;
+    color: gray;
+    font-size: x-small;
+}
+
+.btn{
+    font-family: "Poiret One";
+}
+
+#comment{
+    border: 2px black dashed;
+}
+
+#comments{
+    border: 2px black solid;
+}
+
+
+h5{
+    font-family: "Poiret One";
+    margin-top: 10px;
+
+}
+
+.inputs{
+    width:100%
+}
+
+.warning{
+    color: gray;
+    font-size: x-small;
+}

@@ -1,0 +1,23 @@
+<div class="container">
+    <p>
+        <button class="btn btn-dark btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            View Comments
+        </button>
+    </p>
+
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body" *ngFor="let comment of comments | paginate: config">
+            <span>
+                <p id="date">{{comment.date | date}}</p>
+                <h5>{{comment.name}} says:</h5>
+            </span>
+            <p>{{comment.body}}</p>
+
+            <span><button type="submit" class="button btn btn-dark btn-sm right">Reply</button></span>
+        </div>
+        <pagination-controls class="page" (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+
+
+
+

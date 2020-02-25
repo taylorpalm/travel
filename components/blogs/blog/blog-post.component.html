@@ -1,0 +1,58 @@
+<!------------------POST--------------------------------->
+
+
+<div class="container post">
+    <img class="image" src="{{blog.image}}" alt="Card image cap">
+    <div>
+        <h1>{{blog.title}}</h1>
+<!--        <div class="sharethis-inline-share-buttons"></div>-->
+    </div>
+    <p class="date">{{blog.date | date}}</p>
+    <p class="text">{{blog.body}}</p>
+</div>
+
+<!---------LEAVE A COMMENT--------------------------------->
+
+
+<div class="container" id="comment">
+    <h5>Leave a Comment!</h5>
+    <form [formGroup]="comment" (ngSubmit)="onSubmit(comment)">
+        <div class="has-error">
+            <label>Comment:</label>
+                <textarea class="inputs" formControlName="body" required></textarea>
+                <div *ngIf="comment.controls.body.touched && comment.controls.body.invalid" class="alert alert-danger">
+                    <div *ngIf="comment.controls.body.errors.required">
+                        Comment is required
+                    </div>
+                </div>
+        </div>
+        <div class="has-error">
+            <label>Name:</label>
+                <input class="inputs" type="text" formControlName="name" required>
+                <div *ngIf="comment.controls.name.touched && comment.controls.name.invalid" class="alert alert-danger">
+                    <div *ngIf="comment.controls.name.errors.required">
+                        Name is required
+                    </div>
+                </div>
+        </div>
+       <div class="has-error">
+           <label>Email:</label>
+               <input class="inputs" type="email" formControlName="email" required email>
+               <div *ngIf="comment.controls.email.touched && comment.controls.email.invalid" class="alert alert-danger">
+                   <div *ngIf="comment.controls.email.errors.required || comment.controls.email.errors.email">
+                       Valid email is required
+                   </div>
+               </div>
+       </div>
+
+        <p class="warning">*Email will not be published</p>
+
+        <button [disabled]="!comment.valid" type="submit" class="btn btn-dark btn-sm right">Comment</button>
+    </form>
+
+</div>
+
+<!------------------COMMENTS--------------------------------->
+
+
+<app-comments></app-comments>
